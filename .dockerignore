@@ -1,0 +1,17 @@
+node_modules
+client-build
+build.txt
+config_build.json
+config_local*
+.git
+.github
+.openshift
+.travis.yml
+.idea
+.project
+*.swp
+.DS_Store
+npm-debug.log
+Dockerfile
+.dockerignore
+docker-compose.yml

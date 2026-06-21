@@ -1,0 +1,25 @@
+# Local parity for the Coolify deploy: the game container + its Redis backend.
+# Coolify can also consume this file directly as a "Docker Compose" resource.
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+
+  browserquest:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: "8000"
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379"
+      # REDIS_PASSWORD: "set-me-if-redis-requires-auth"
+    depends_on:
+      - redis
+
+volumes:
+  redis-data:

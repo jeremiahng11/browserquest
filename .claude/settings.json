@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker version *)",
+      "Bash(docker compose *)",
+      "Read(//Applications/**)",
+      "Read(//usr/local/bin/**)",
+      "Read(//var/run/**)",
+      "Bash(git config *)",
+      "Bash(git init *)",
+      "Bash(git branch *)"
+    ]
+  }
+}
