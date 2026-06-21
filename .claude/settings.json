@@ -8,7 +8,9 @@
       "Read(//var/run/**)",
       "Bash(git config *)",
       "Bash(git init *)",
-      "Bash(git branch *)"
+      "Bash(git branch *)",
+      "Bash(gh auth *)",
+      "Bash(git remote *)"
     ]
   }
 }
